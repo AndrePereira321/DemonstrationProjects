@@ -1,0 +1,12 @@
+:root {
+    --nav-color: #fcf2f2;
+}
+
+.gf-navbar {
+    background-color: var(--nav-color);
+    border-bottom: 2px tomato solid;
+}
+
+.gf-nav-img {
+    height: 50px;   
+}

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FoodRating</string>
+    <string name="app_logo">App Logo</string>
+    <string name="se_connecter">Connectez-Vous!</string>
+    <string name="about">A Propos</string>
+    <string name="about_text">
+        Food Rating est une application qui permet plusieurs utilisateurs de évaluer différents
+        endroits proposant une alimentation durable (écologique).\n\n
+        Auteur: De Sousa Pereira, André Filipe\n
+        Matricule: g51999\n
+        Groupe: E111
+    </string>
+    <string name="drawer_logo">Drawer Logo</string>
+    <string name="welcome_app">Bienvenue sur Food Rating!</string>
+    <string name="temp">Temp</string>
+    <string name="filter">Filtrer:</string>
+    <string name="evaluez">Evaluez cet endroit:</string>
+    <string name="sousmettre">Sousmettre</string>
+    <string name="ask_feedback">Introduissez un commentaire/description…</string>
+    <string name="no_feedback">Pas d\'évaluations sur cet endroit!</string>
+    <string name="visiter">Visiter</string>
+    <string name="carte">Carte</string>
+    <string name="charger_image">Charger Image</string>
+    <string name="valider_permissions">Valider Permissions</string>
+    <string name="image">Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

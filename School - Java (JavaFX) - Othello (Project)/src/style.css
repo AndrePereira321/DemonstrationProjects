@@ -1,0 +1,143 @@
+.startMenu {
+    -fx-background-image: url("imgs/startBackground.jpg");
+    -fx-background-size: stretch;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.label {
+    -fx-font-family: "Cambria";
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.startMenuGrid>.text-field,
+.startMenuGrid>.button {
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+.titleLabel {
+    -fx-underline: true;
+    -fx-font: normal 30 "Calibri";
+    -fx-background-color: rgba(255, 140, 0, 0.7);
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+.button {
+    -fx-background-color: rgb(37, 116, 169);
+    -fx-text-fill: white;
+    -fx-border-color: rgb(5, 5, 5);
+    -fx-border-width: 2;
+}
+
+.button:hover {
+    -fx-background-color: rgb(0, 191, 255);
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+    -fx-border-color: rgb(5, 5, 5);
+    -fx-border-width: 3;
+}
+
+.playing {
+    -fx-background-image: url("imgs/gameBackground.jpg");
+    -fx-background-size: stretch;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.playerZone {
+    -fx-hgap: 20;
+    -fx-vgap: 8;
+    -fx-alignment: center;
+    -fx-padding: 5;
+}
+
+.playerZone>.label {
+    -fx-font-size: 12;
+}
+
+.blackPlayerZone {
+    -fx-background-color: red;
+}
+
+.whitePlayerZone {
+    -fx-background-color: green;
+}
+
+.currentZone {
+    -fx-border-color: black;
+    -fx-border-style: segments(10, 15, 15, 15) line-cap round;
+    -fx-border-width: 4;
+}
+
+.board {
+    -fx-alignment: center;
+    -fx-padding: 5;
+    -fx-hgap: 3;
+    -fx-vgap: 3;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 4, 2);
+    -fx-background-image: url("imgs/woodBackground.jpg");
+    -fx-background-position: center center;
+}
+
+.buttonZone {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-background-color: rgba(230, 230, 250, 0.85);
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+
+}
+
+.indexSquare {
+    -fx-background-image: url("imgs/indexerBackground.jpg");
+    -fx-border-width: 2;
+    -fx-border-color: black;
+}
+
+.indexSquare>.label {
+    -fx-font: bolder 30 "Arial";
+    -fx-text-fill: white;
+}
+
+.statsZone {
+    -fx-background-color: rgba(230, 230, 250, 0.85);
+    -fx-padding: 7;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+}
+
+.progressIndicators {
+    -fx-alignment: center;
+    -fx-background-color: rgba(230, 230, 250, 0.85);
+    -fx-hgap: 20;
+    -fx-vgap: 5;
+    -fx-padding: 7;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+}
+
+.progress-indicator {
+    -fx-progress-color: black;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.3, 1, 1);
+}
+
+.progress-bar {
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 1, 1);
+}
+
+.progress-bar>.bar {
+    -fx-background-color: green;
+}
+
+.endGameGif {
+    -fx-background-image: url("imgs/congrats.jpg");
+    -fx-background-size: stretch;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 1, 1);
+    -fx-border-style: segments(10, 15, 15, 15) line-cap round;
+    -fx-border-width: 5;
+}

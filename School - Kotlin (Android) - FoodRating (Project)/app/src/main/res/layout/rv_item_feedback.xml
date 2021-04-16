@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="feedback"
+            type="mobg5.g51999.foodrating.business.UserFeedback" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/feedback_img_status"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:contentDescription="@string/temp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/feedback_item_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/feedback_item_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:text="@{`Utilisateur: ` + feedback.userEmail}"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/feedback_item_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:text="@{`Evaluation: ` + feedback.ratingFr}"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/feedback_item_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:text="@{feedback.comment}"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/feedback_item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:text="@{`Date: ` + feedback.date_added.toString()}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

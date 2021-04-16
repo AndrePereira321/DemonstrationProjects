@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="mobg5.g51999.foodrating.screens.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="mobg5.g51999.foodrating.screens.lobby.LobbyFragment"
+        android:label="Lobby"
+        tools:layout="@layout/fragment_lobby">
+        <argument
+            android:name="connectedUser"
+            app:argType="mobg5.g51999.foodrating.business.User" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_detailPageFragment"
+            app:destination="@id/detailPageFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailPageFragment"
+        android:name="mobg5.g51999.foodrating.screens.detailpage.DetailPageFragment"
+        tools:layout="@layout/fragment_detail_page">
+        <argument
+            android:name="connectedUser"
+            app:argType="mobg5.g51999.foodrating.business.User" />
+        <argument
+            android:name="record"
+            app:argType="mobg5.g51999.foodrating.business.api.RecordsProperty" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="mobg5.g51999.foodrating.screens.maps.MapsFragment"
+        android:label="Carte de Restaurants Durables"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="mobg5.g51999.foodrating.screens.mainpage.MainPageFragment"
+        android:label="FoodRating"
+        tools:layout="@layout/fragment_main_page">
+        <action
+            android:id="@+id/action_mainPageFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>

@@ -1,0 +1,17 @@
+.nav-logo {
+    height: 70px;
+    margin-left: 2rem;
+}
+
+.nav-menu-icon {
+    height: 50px;
+}
+
+.navbar {
+    background-image: url("/resources/backgrounds/navbar-background.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+    background-size: contain;
+    border-bottom: tomato 2px solid;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="record"
+            type="mobg5.g51999.foodrating.business.api.RecordsProperty" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rv_const_lay_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7sp"
+        android:background="@drawable/rectangle"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/rv_image_status"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:contentDescription="@string/temp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/rv_vertica_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@{record.fieldsProperty.nom}"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rv_adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@{record.fieldsProperty.adresse}"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rv_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@{record.fieldsProperty.categorie}"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rv_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

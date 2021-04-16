@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mapsFragment"
+        android:icon="@drawable/ic_maps"
+        android:title="@string/carte"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/about_icon"
+        android:title="@string/about" />
+
+</menu>

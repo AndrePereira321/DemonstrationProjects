@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "874483578882",
+    "firebase_url": "https://foodrating-mobg5-51999-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "foodrating-mobg5-51999",
+    "storage_bucket": "foodrating-mobg5-51999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874483578882:android:e0405010ad450ea2494f1b",
+        "android_client_info": {
+          "package_name": "mobg5.g51999.foodrating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874483578882-qfm7piufivhgjkgh52a5mgel70c28qg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUUmwnahJP3XI5ubxbNxnPnE63n0Z_6HA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874483578882-qfm7piufivhgjkgh52a5mgel70c28qg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

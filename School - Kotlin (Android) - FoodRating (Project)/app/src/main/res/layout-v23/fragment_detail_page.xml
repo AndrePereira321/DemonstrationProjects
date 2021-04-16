@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="record"
+            type="mobg5.g51999.foodrating.business.api.RecordsProperty" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/detail_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/detail_record_info_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7sp"
+                android:background="@drawable/rectangle"
+                android:orientation="vertical"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/detail_record_categorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D4EDF3"
+                    android:text="@{`Categorie: ` + record.fieldsProperty.categorie}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/detail_record_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D4EDF3"
+                    android:text="@{`Type: ` + record.fieldsProperty.type}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/detail_record_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D4EDF3"
+                    android:text="@{`Adresse: ` + record.fieldsProperty.adresse}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/detail_record_site_fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:background="#D4EDF3"
+                    android:linksClickable="true"
+                    android:text="@{`SiteFR: ` + record.fieldsProperty.siteFr}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/detail_record_site_nl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:background="#D4EDF3"
+                    android:linksClickable="true"
+                    android:text="@{`SiteNL: ` + record.fieldsProperty.siteNl}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detail_image_slide_container"
+                android:layout_width="match_parent"
+                android:layout_height="264dp"
+                android:layout_margin="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="6dp"
+                android:elevation="5dp">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/detail_image_slider_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/detail_progress_bar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressDrawable="@android:drawable/progress_horizontal"
+                android:visibility="gone" />
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:id="@+id/detail_no_feedback_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:padding="15sp"
+                android:text="@string/no_feedback"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail_feedback_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="264dp"
+                android:layout_margin="7sp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:id="@+id/detail_comment_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="5dp"
+                android:background="#F0F0F0"
+                android:text="@string/evaluez"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.hsalf.smileyrating.SmileyRating
+                android:id="@+id/detail_smiley_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#F0F0F0"
+                android:elevation="1dp"/>
+
+            <EditText
+                android:id="@+id/detail_feedback_input"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:autofillHints="@string/ask_feedback"
+                android:background="#F0F0F0"
+                android:ems="10"
+                android:hint="@string/ask_feedback"
+                android:inputType="textLongMessage|textMultiLine"
+                android:singleLine="false"
+                android:textColor="@android:color/black"
+                android:elevation="1dp"/>
+
+            <Button
+                android:id="@+id/detail_bt_submit_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10sp"
+                android:background="@color/headerTitle"
+                android:text="@string/sousmettre"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:elevation="0.5dp" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginBottom="5dp" />
+
+            <Button
+                android:id="@+id/detail_bt_visit"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/visiter"
+                android:elevation="1dp"/>
+
+            <Button
+                android:id="@+id/detail_bt_upload_img"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/charger_image"
+                android:elevation="1dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</layout>
