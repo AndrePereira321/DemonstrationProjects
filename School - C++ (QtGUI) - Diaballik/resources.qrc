@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../resources/images/background.jpg</file>
+		<file>../resources/images/textEditBackground.jpg</file>
+        <file>../resources/images/icon_settings.png</file>
+        <file>../resources/images/diaballik_logo.png</file>
+        <file>../resources/images/rules_icon.png</file>
+        <file>../resources/images/winner_logo.png</file>
+        <file>../resources/assets/northPlayer.png</file>
+        <file>../resources/assets/northPlayerBall.png</file>
+        <file>../resources/assets/southPlayer.png</file>
+        <file>../resources/assets/southPlayerBall.png</file>
+        <file>../resources/qss/stylesheet.qss</file>
+    </qresource>
+</RCC>
